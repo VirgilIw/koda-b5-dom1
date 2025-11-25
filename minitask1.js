@@ -11,6 +11,9 @@ form.addEventListener("submit", (e) => {
   window.setTimeout(() => {
     celToFahren(answer);
   }, 1000);
+  window.setTimeout(() => {
+    celToReamur(answer);
+  }, 1000);
 });
 
 const celToFahren = (c) => {
@@ -18,4 +21,10 @@ const celToFahren = (c) => {
   let fahren = (4 / 5) * parse1;
   let parse2 = parseFloat(fahren);
   fahrenheit.textContent = parse2 + "°" + "fahrenheit";
+};
+
+//
+const celToReamur = (c) => {
+  let ream = (9 / 5) * c + 32;
+  reamur.textContent = ream + "°" + "reamur";
 };
