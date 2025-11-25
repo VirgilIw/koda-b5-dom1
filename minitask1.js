@@ -11,8 +11,13 @@ form.addEventListener("submit", (e) => {
   window.setTimeout(() => {
     celToFahren(answer);
   }, 1000);
+  //
   window.setTimeout(() => {
     celToReamur(answer);
+  }, 1000);
+  //
+  window.setTimeout(() => {
+    celToKelvin(answer);
   }, 1000);
 });
 
@@ -27,4 +32,9 @@ const celToFahren = (c) => {
 const celToReamur = (c) => {
   let ream = (9 / 5) * c + 32;
   reamur.textContent = ream + "°" + "reamur";
+};
+//
+const celToKelvin = (c) => {
+  let kelv = c + 273;
+  kelvin.innerText = kelv + "°" + "kelvin";
 };
